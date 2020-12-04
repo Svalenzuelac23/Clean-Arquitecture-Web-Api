@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.4" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\02. Core\Application\Application.csproj" />
+    <ProjectReference Include="..\..\03. Persistence\Persistence\Persistence.csproj" />
+    <ProjectReference Include="..\..\04. Infraestructure\Infraestructure\Infraestructure.csproj" />
+  </ItemGroup>
+
+
+</Project>
