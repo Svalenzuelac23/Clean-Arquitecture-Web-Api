@@ -1,7 +1,9 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Application.Repositories;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Persistence.Data;
+using Persistence.Repositories;
 
 namespace Persistence
 {
@@ -20,6 +22,13 @@ namespace Persistence
             {
                 option.UseSqlServer(configuration.GetConnectionString("{your-conection-string}"));
             });
+
+            //services.AddDbContext<ContextTest>(option =>
+            //{
+            //    option.UseSqlServer(configuration.GetConnectionString("ConnectionsString:Cn"));
+            //});
+
+            services.AddTransient<IPersonRepository, PersonRepository>();
             return services;
         }
     }
